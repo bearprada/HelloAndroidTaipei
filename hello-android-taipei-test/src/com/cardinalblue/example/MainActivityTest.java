@@ -185,10 +185,30 @@ public class MainActivityTest extends AndroidTestCase {
         }
     }
     
+    public void test00013() {
+        try {
+            assertEquals(3628800L, mCalculator.multiple(1, 10000));
+            fail();
+        } catch (IllegalArgumentException e) {
+            fail();
+        } catch (OverNumberException e) {
+        }
+    }
+
+    public void test00014() {
+        try {
+            assertEquals(0, mCalculator.multiple(100, 1));
+            fail();
+        } catch (IllegalArgumentException e) {
+        } catch (OverNumberException e) {
+            fail();
+        }
+    }
+    
     /**
      * test min
      * */
-    public void test00013() {
+    public void test00015() {
         try {
             assertEquals(0L, mCalculator.min(0L, 100L));
         } catch (IllegalArgumentException e) {
