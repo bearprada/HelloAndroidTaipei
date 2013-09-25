@@ -190,9 +190,10 @@ public class MainActivityTest extends AndroidTestCase {
      * */
     public void test00013() {
         try {
-            assertEquals(0L, mCalculator.max(0L, 100L));
+            assertEquals(0L, mCalculator.min(0L, 100L));
         } catch (IllegalArgumentException e) {
             fail();
         }
     }
+
 }

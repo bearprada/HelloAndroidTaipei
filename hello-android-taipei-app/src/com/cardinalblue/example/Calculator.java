@@ -63,7 +63,7 @@ public class Calculator {
     }
     
     public long min(long start, long end) 
-            throws IllegalArgumentException, OverNumberException {
+            throws IllegalArgumentException {
         if (start>=end) {
             throw new IllegalArgumentException("start >= end");
         }
