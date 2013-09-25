@@ -47,7 +47,7 @@ public class Calculator {
     }
     
     public long middle(long start, long end) 
-            throws IllegalArgumentException, OverNumberException {
+            throws IllegalArgumentException {
         if (start>=end) {
             throw new IllegalArgumentException("start >= end");
         }
@@ -55,7 +55,7 @@ public class Calculator {
     }
     
     public long max(long start, long end) 
-            throws IllegalArgumentException, OverNumberException {
+            throws IllegalArgumentException {
         if (start>=end) {
             throw new IllegalArgumentException("start >= end");
         }
