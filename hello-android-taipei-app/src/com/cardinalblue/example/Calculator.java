@@ -1,5 +1,7 @@
 package com.cardinalblue.example;
 
+import java.util.Random;
+
 public class Calculator {
     
     public long sum(long start, long end) 
@@ -50,5 +52,29 @@ public class Calculator {
             throw new IllegalArgumentException("start >= end");
         }
         return (start+end)/2;
+    }
+    
+    public long max(long start, long end) 
+            throws IllegalArgumentException, OverNumberException {
+        if (start>=end) {
+            throw new IllegalArgumentException("start >= end");
+        }
+        return end;
+    }
+    
+    public long min(long start, long end) 
+            throws IllegalArgumentException, OverNumberException {
+        if (start>=end) {
+            throw new IllegalArgumentException("start >= end");
+        }
+        return start;
+    }
+    
+    public int random(int start, int end) 
+            throws IllegalArgumentException, OverNumberException {
+        if (start>=end) {
+            throw new IllegalArgumentException("start >= end");
+        }
+        return new Random().nextInt((end - start))+start;
     }
 }
