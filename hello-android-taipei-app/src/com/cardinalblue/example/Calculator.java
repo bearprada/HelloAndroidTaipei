@@ -28,4 +28,27 @@ public class Calculator {
         }
         return result;
     }
+    
+    public long multiple(int start, int end) 
+            throws IllegalArgumentException, OverNumberException {
+        if (start >= end || start <= 0 || end <= 0) {
+            throw new IllegalArgumentException("start >= end");
+        }
+        long result = start;
+        for(int i = start ; i<=end ; i++ ) {
+            result *= i;
+        } 
+        if (result<=0) {
+            throw new OverNumberException("result = " +result);
+        }
+        return result;
+    }
+    
+    public long middle(long start, long end) 
+            throws IllegalArgumentException, OverNumberException {
+        if (start>=end) {
+            throw new IllegalArgumentException("start >= end");
+        }
+        return (start+end)/2;
+    }
 }

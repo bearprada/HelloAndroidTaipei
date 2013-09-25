@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
                 try {
                     long start = Long.parseLong(mStartText.getText().toString());
                     long end = Long.parseLong(mEndText.getText().toString());
-                    mResultText.setText("Result : " + calculator.fastSum(start, end));
+                    mResultText.setText("Result : " + calculator.multiple((int)start, (int)end));
                 } catch (NumberFormatException ex) {
                     Toast.makeText(MainActivity.this, "please enter the numbers", Toast.LENGTH_SHORT).show();
                 } catch (IllegalArgumentException e) {
