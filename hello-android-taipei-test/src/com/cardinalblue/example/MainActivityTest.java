@@ -124,4 +124,75 @@ public class MainActivityTest extends AndroidTestCase {
             assertTrue(thread.isFinished);
         }
     }
+    
+    /**
+     * test middle()
+     * */
+    public void test00007() {
+        try {
+            assertEquals(50L, mCalculator.middle(0, 100));
+        } catch (IllegalArgumentException e) {
+            fail();
+        }
+    }
+
+    public void test00008() {
+        try {
+            assertEquals(50L, mCalculator.middle(100, 0));
+            fail();
+        } catch (IllegalArgumentException e) {
+        }
+    }
+    
+    /**
+     * test max()
+     * */
+    public void test00009() {
+        try {
+            assertEquals(100L, mCalculator.max(0, 100));
+        } catch (IllegalArgumentException e) {
+            fail();
+        }
+    }
+    
+    public void test00010() {
+        try {
+            assertEquals(Long.MAX_VALUE, mCalculator.max(0, Long.MAX_VALUE));
+        } catch (IllegalArgumentException e) {
+            fail();
+        }
+    }
+
+    public void test00011() {
+        try {
+            assertEquals(Long.MAX_VALUE, mCalculator.max(Long.MAX_VALUE, 0));
+            fail();
+        } catch (IllegalArgumentException e) {
+            
+        }
+    }
+    
+    /**
+     * test multiple()
+     * */
+    public void test00012() {
+        try {
+            assertEquals(3628800L, mCalculator.multiple(1, 10));
+        } catch (IllegalArgumentException e) {
+            fail();
+        } catch (OverNumberException e) {
+            fail();
+        }
+    }
+    
+    /**
+     * test min
+     * */
+    public void test00013() {
+        try {
+            assertEquals(0L, mCalculator.max(0L, 100L));
+        } catch (IllegalArgumentException e) {
+            fail();
+        }
+    }
 }
