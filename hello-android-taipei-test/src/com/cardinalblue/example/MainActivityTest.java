@@ -18,7 +18,7 @@ public class MainActivityTest extends AndroidTestCase {
      */
     public void test00001() {
         try {
-            assertEquals(5000L, mCalculator.fastSum(0, 100));
+            assertEquals(5050L, mCalculator.fastSum(0, 100));
         } catch (IllegalArgumentException e) {
             fail();
         } catch (OverNumberException e) {
@@ -31,7 +31,7 @@ public class MainActivityTest extends AndroidTestCase {
      */
     public void test00002() {
         try {
-            assertEquals(1500000L, mCalculator.fastSum(1000, 2000));
+            assertEquals(1501500L, mCalculator.fastSum(1000, 2000));
         } catch (IllegalArgumentException e) {
             fail();
         } catch (OverNumberException e) {
