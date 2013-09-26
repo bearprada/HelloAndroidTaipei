@@ -24,7 +24,7 @@ public class Calculator {
         if (start>=end) {
             throw new IllegalArgumentException("start >= end");
         }
-        long result = ( start+end ) * ( end-start ) / 2; 
+        long result = ((start + end) * (end - (start - 1))) / 2; 
         if (result<=0) {
             throw new OverNumberException("result = " +result);
         }
